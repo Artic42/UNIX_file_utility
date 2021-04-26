@@ -4,7 +4,7 @@ File Name:   Hermes.c
 Compiler:    GCC
 Author:      Artic42
 Description: This is library to store variable in files in a UNIX system.
-Testd on:    Raspberry Pi OS and wsl2
+Tested on:    Raspberry Pi OS and wsl2
 */
 
 /****************************************
