@@ -32,6 +32,7 @@ int main (void)
 {
     int testInteger = 533;
     float testFloat = 43.33333;
+    char testChar = 'B';
     string testPath = "/tmp/testHermes";
     // Test bool2file, file2bool, createFile, deleteFile
     bool2file (testPath, BFALSE);
@@ -89,9 +90,17 @@ int main (void)
         return 1;
     }
 
+    file2char (testPath, testChar);
+    if (testChar != file2char (testPath, 0))
+    {
+        printf ("Test fails, file2char or char2file don't work");
+        return 1;
+    }
+
     //test string
     string2file (testPath, testPath);
-    
-    printf ("TEST OK!!!!\n");
+    file2print (testPath);
+    printf (testPath);
+    printf ("TEST OK, if last 2 lines are the same.\n");
     return 0;
 }

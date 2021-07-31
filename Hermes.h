@@ -29,6 +29,9 @@ int file2int (string  path);
 void float2file (string path, float value);
 float file2float (string path);
 void string2file (string path, string value);
+void file2print (string path);
+void char2file (string path, char value);
+char file2char (string path, int offset);
 
 
 #endif

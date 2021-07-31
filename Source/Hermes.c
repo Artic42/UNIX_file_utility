@@ -117,3 +117,26 @@ void string2file (string path, string value)
     fclose(filePtr);
 }
 
+void file2print (string path)
+{
+    char buffer [20480];
+    FILE *filePtr = NULL;
+    filePtr = fopen (path, "r");
+    fscanf (filePtr, buffer);
+    printf (buffer);
+    fclose (filePtr);
+}
+
+void char2file (string path, char value)
+{
+    string2file (path, &value);
+}
+
+char file2char (string path, int offset)
+{
+    char buffer [20480];
+    FILE *filePtr = NULL;
+    filePtr = fopen (path, "r");
+    fscanf (filePtr, buffer);
+    return buffer [offset];
+}
