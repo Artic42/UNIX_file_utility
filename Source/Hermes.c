@@ -108,3 +108,12 @@ float file2float (string path)
     fclose (filePtr);
     return result;
 }
+
+void string2file (string path, string value)
+{
+    FILE *filePtr = NULL;
+    filePtr = fopen (path, "w");
+    fprintf (filePtr, value);
+    fclose(filePtr);
+}
+

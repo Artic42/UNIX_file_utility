@@ -29,6 +29,6 @@ int file2int (string  path);
 void float2file (string path, float value);
 float file2float (string path);
 void string2file (string path, string value);
-string file2string (string path);
+
 
 #endif

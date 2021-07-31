@@ -14,11 +14,7 @@ Testd on:    Raspberry Pi OS
 *	Include                             *
 ****************************************/
 
-#include "Artic42.h"
-
-/****************************************
-*	Public macros                       *
-****************************************/
+#include "lib/Artic42.h"
 
 /****************************************
 *	Public Function Prototype           * 
@@ -33,10 +29,6 @@ int file2int (string  path);
 void float2file (string path, float value);
 float file2float (string path);
 void string2file (string path, string value);
-string file2string (string path);
 
-/****************************************
-*	Public Constants                    * 
-****************************************/
 
 #endif
