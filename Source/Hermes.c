@@ -122,14 +122,17 @@ void file2print (string path)
     char buffer [20480];
     FILE *filePtr = NULL;
     filePtr = fopen (path, "r");
-    fscanf (filePtr, buffer);
-    printf (buffer);
+    fgets (buffer, 20480, filePtr);
+    printf ("%s \n", buffer);
     fclose (filePtr);
 }
 
 void char2file (string path, char value)
 {
-    string2file (path, &value);
+    FILE *filePtr = NULL;
+    filePtr = fopen (path, "w");
+    fprintf (filePtr, "%c", value);
+    fclose (filePtr);
 }
 
 char file2char (string path, int offset)
@@ -137,6 +140,6 @@ char file2char (string path, int offset)
     char buffer [20480];
     FILE *filePtr = NULL;
     filePtr = fopen (path, "r");
-    fscanf (filePtr, buffer);
+    fgets (buffer, 20480, filePtr);
     return buffer [offset];
 }

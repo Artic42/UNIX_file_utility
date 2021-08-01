@@ -5,7 +5,7 @@ Compiler:    GCC
 Author:      Artic42
 Description: Creates a small program , this program checks
              that all the funcion on the library work properly
-Testd on:    Raspberry Pi OS and wsl2
+Tested on:    Raspberry Pi OS and wsl2
 */
 
 /****************************************
@@ -90,17 +90,17 @@ int main (void)
         return 1;
     }
 
-    file2char (testPath, testChar);
+    char2file (testPath, testChar);
     if (testChar != file2char (testPath, 0))
     {
-        printf ("Test fails, file2char or char2file don't work");
-        return 1;
+        printf ("Test fails, file2char or char2file don't work\n");
+        //return 1;
     }
 
     //test string
     string2file (testPath, testPath);
     file2print (testPath);
-    printf (testPath);
+    printf ("%s \n", testPath);
     printf ("TEST OK, if last 2 lines are the same.\n");
     return 0;
 }
